@@ -1,21 +1,23 @@
-import { useQuery } from "@apollo/client";
-import { Products } from "./components/Products/Products";
-import { Product } from "./types.d";
-import { GET_PRODUCTS } from "./queries/queries";
-import { Loading } from "./components/Loading/Loading";
-import { Header } from "./components/Header/Header";
+import { ProductCart } from "./components/ProductCart/ProductCart";
+import { Navbar } from "./components/Navbar/Navbar";
 import { Home } from "./pages/Home/Home";
+import { Section } from "./components/Section/Section";
 
 function App() {
-  const { data, loading } = useQuery<{ products: Product[] }>(GET_PRODUCTS);
-
-  if (loading) return <Loading />;
-
   return (
     <>
-      <Header />
-      <Home />
-      {data?.products && <Products products={data.products} />}
+      <Navbar />
+      <Home className="px-20">
+        <ProductCart />
+        <Section
+          title="Section 1"
+          content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
+        />
+        <Section
+          title="Section 2"
+          content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
+        />
+      </Home>
     </>
   );
 }

@@ -1,3 +1,4 @@
-export const Home = () => {
-  return <h1>DESDE HOME</h1>;
+import HomeInterface from "../../interfaces/Home/HomeInterface";
+export const Home = ({ className, children }: HomeInterface) => {
+  return <main className={`${className}`}>{children}</main>;
 };

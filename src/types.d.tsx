@@ -1,10 +1,7 @@
-export interface Product {
+export interface ListProduct {
     nombre:     string;
     precio:     number;
-    referencia: Referencia;
+    referencia: string;
     foto:       string;
 }
 
-export enum Referencia {
-    G40 = "G40",
-}

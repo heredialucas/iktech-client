@@ -15,5 +15,14 @@ export const Constans = {
     SANDALIAS: {
       PORCENT_30: "HOT SALE -30% EN SANDALIAS",
     },
+    COMPRAS: {
+      ENVIOS: "ENVÍOS GRATIS PARA PEDIDOS SUPERIORES A $300.000",
+    },
   },
+  TEXT:{
+    COLOR: 'COLOR',
+    COD_DE_PRODUCTO: 'Cod. de prod',
+    TALLA: 'TALLA',
+    GUIA_DE_TALLAS: 'GUÍA DE TALLAS',
+  }
 };

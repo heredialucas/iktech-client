@@ -1,10 +1,10 @@
-import { Product } from "../../types.d";
+import { ListProduct } from "../../types.d";
 
 interface Props {
-  products: Product[];
+  products: ListProduct[];
 }
 
-export const Products = ({ products }: Props) => {
+export const ListProducts = ({ products }: Props) => {
   return (
     <>
       {products?.map((product) => (
