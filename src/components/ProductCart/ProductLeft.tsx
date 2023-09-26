@@ -1,3 +1,4 @@
+import { SliderStyle } from "../../styles/SliderCard/SliderCard";
 import { SliderImg } from "../SliderImg/SliderImg";
 
 const obj = {
@@ -28,9 +29,9 @@ export const ProductLeft = () => {
       <p className="text-gray-500 text-lg p-2">{`HUSSPUPPIESCO / CALZADO / ${obj.nombre}`}</p>
       <img src="https://i.ibb.co/4SnyQps/1.jpg" alt="ZAPAS" />
       <hr className="w-9/12 p-3 self-center" />
-      <SliderImg>
-        {obj.albumFotos.map((foto) => (
-          <div>
+      <SliderImg className={SliderStyle} quantity={6}>
+        {obj.albumFotos.map((foto, index) => (
+          <div key={index}>
             <img src={foto} alt="ZAPAS" />
           </div>
         ))}

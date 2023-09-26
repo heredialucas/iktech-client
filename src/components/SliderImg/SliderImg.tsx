@@ -1,16 +1,16 @@
 import Slider from "react-slick";
 import SliderImgInterface from "../../interfaces/SliderImg/SliderImg";
 
-export const SliderImg = ({ children }: SliderImgInterface) => {
+export const SliderImg = ({ children, className , quantity}: SliderImgInterface) => {
   const settings = {
     dots: false,
-    infinite: true,
+    infinite: false,
     speed: 500,
-    slidesToShow: 6,
-    slidesToScroll: 1,
+    slidesToShow: quantity ? quantity : 4,
+    slidesToScroll: 3,
   };
   return (
-    <div className="w-9/12 self-center">
+    <div className={className}>
       <Slider {...settings}>{children}</Slider>
     </div>
   );
