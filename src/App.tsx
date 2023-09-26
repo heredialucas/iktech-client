@@ -4,6 +4,7 @@ import { Home } from "./pages/Home/Home";
 import { Section } from "./components/Section/Section";
 import { Constans } from "./constants/Constans";
 import ListCard from "./components/ListCard/ListCard";
+import { Footer } from "./components/Footer/Footer";
 
 const {
   SECTION_TEXT: { TITLE, CONTENT },
@@ -80,6 +81,7 @@ function App() {
           underline
         />
       </Home>
+      <Footer />
     </>
   );
 }
