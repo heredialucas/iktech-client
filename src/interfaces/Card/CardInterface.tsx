@@ -5,5 +5,5 @@ export default interface CardInterface {
   referencia?: string;
   albumFotos: string[];
   btn?: boolean;
-  onClick?: () => void;
+  handleClick?: (foto: string) => void;
 }

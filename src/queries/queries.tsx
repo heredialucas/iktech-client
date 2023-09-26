@@ -5,6 +5,9 @@ export const GET_PRODUCTS = gql`
     products {
       nombre
       foto
+      albumFotos
+      referencia
+      precio
     }
   }
 `;

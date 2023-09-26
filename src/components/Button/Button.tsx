@@ -1,8 +1,8 @@
 import ButtonProps from "../../interfaces/Button/ButtonInterface";
 
-export const Button = ({ className, textContent }: ButtonProps) => {
+export const Button = ({ className, textContent, onClick }: ButtonProps) => {
   return (
-    <a href="#" className={className}>
+    <a onClick={onClick} href="#" className={className}>
       {textContent}
     </a>
   );

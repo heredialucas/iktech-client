@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import SliderImgInterface from "../../interfaces/SliderImg/SliderImg";
+import SliderImgInterface from "../../interfaces/SliderImg/SliderImgInterface";
 
 export const SliderImg = ({ children, className , quantity}: SliderImgInterface) => {
   const settings = {

@@ -7,4 +7,5 @@ export default interface ListCardInterface {
   classNameTitle?: string;
   underline?: boolean;
   btn?: boolean;
+  onClick?: () => void;
 }

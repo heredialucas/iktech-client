@@ -5,81 +5,49 @@ import { Section } from "./components/Section/Section";
 import { Constans } from "./constants/Constans";
 import ListCard from "./components/ListCard/ListCard";
 import { Footer } from "./components/Footer/Footer";
+import { useQuery } from "@apollo/client";
+import { GET_PRODUCTS } from "./queries/queries";
+import { Loading } from "./components/Loading/Loading";
+import { useProduct } from "./context/store/store";
 
 const {
   SECTION_TEXT: { TITLE, CONTENT },
   TEXT: { COMPLETA_TU_LOOK, PRODUCTOS_RECOMENDADOS },
 } = Constans;
 
-const obj = {
-  nombre: "RUTAS PARA LA ZAPAS",
-  foto: "https://i.ibb.co/4SnyQps/1.jpg",
-  referencia: "123456789",
-  precio: 1000,
-  albumFotos: [
-    "https://i.ibb.co/4SnyQps/1.jpg",
-    "https://i.ibb.co/4SnyQps/1.jpg",
-    "https://i.ibb.co/4SnyQps/1.jpg",
-    "https://i.ibb.co/4SnyQps/1.jpg",
-    "https://i.ibb.co/4SnyQps/1.jpg",
-    "https://i.ibb.co/4SnyQps/1.jpg",
-    "https://i.ibb.co/4SnyQps/1.jpg",
-    "https://i.ibb.co/4SnyQps/1.jpg",
-    "https://i.ibb.co/4SnyQps/1.jpg",
-    "https://i.ibb.co/4SnyQps/1.jpg",
-    "https://i.ibb.co/4SnyQps/1.jpg",
-    "https://i.ibb.co/4SnyQps/1.jpg",
-    "https://i.ibb.co/4SnyQps/1.jpg",
-  ],
-};
-
 function App() {
+  const { data, loading } = useQuery(GET_PRODUCTS);
+  const setProduct = useProduct((state) => state.setProduct);
+  const setAllProducts = useProduct((state) => state.setAllProducts);
+
+  if (data?.products && setAllProducts) {
+    setProduct(data.products[0]);
+    setAllProducts(data.products);
+  }
+
   return (
     <>
       <Navbar />
       <Home className="px-20">
-        <ProductCart />
+        {data?.products ? <ProductCart /> : <Loading />}
         <Section title={TITLE} content={CONTENT} />
         <Section title={TITLE} content={CONTENT} />
-        <ListCard
-          title={COMPLETA_TU_LOOK}
-          cards={[
-            obj,
-            obj,
-            obj,
-            obj,
-            obj,
-            obj,
-            obj,
-            obj,
-            obj,
-            obj,
-            obj,
-            obj,
-            obj,
-          ]}
-          btn={true}
-        />
-        <ListCard
-          title={PRODUCTOS_RECOMENDADOS}
-          cards={[
-            obj,
-            obj,
-            obj,
-            obj,
-            obj,
-            obj,
-            obj,
-            obj,
-            obj,
-            obj,
-            obj,
-            obj,
-            obj,
-          ]}
-          classNameTitle="bg-white text-gray-500"
-          underline
-        />
+        {loading && !data?.products && <Loading />}
+        {data?.products && (
+          <>
+            <ListCard
+              title={COMPLETA_TU_LOOK}
+              cards={data.products}
+              btn={true}
+            />
+            <ListCard
+              title={PRODUCTOS_RECOMENDADOS}
+              cards={data?.products}
+              classNameTitle="bg-white text-gray-500"
+              underline
+            />
+          </>
+        )}
       </Home>
       <Footer />
     </>
