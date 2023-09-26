@@ -1,5 +1,10 @@
 import CardInterface from "../Card/CardInterface";
 
-export default interface ListCardProps {
+export default interface ListCardInterface {
+  title: string;
   cards: CardInterface[];
+  className?: string;
+  classNameTitle?: string;
+  underline?: boolean;
+  btn?: boolean;
 }

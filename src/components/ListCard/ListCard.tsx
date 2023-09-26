@@ -1,17 +1,23 @@
-import CardInterface from "../../interfaces/Card/CardInterface";
 import { SliderImg } from "../SliderImg/SliderImg";
 import { Card } from "../Card/Card";
+import ListCardInterface from "../../interfaces/ListCard/ListCardInterface";
 
-interface ListCardProps {
-  cards: CardInterface[];
-}
-
-const ListCard = ({ cards }: ListCardProps) => {
+const ListCard = ({
+  cards,
+  title,
+  className,
+  classNameTitle,
+  underline,
+  btn,
+}: ListCardInterface) => {
   return (
-    <div className="w-full my-5">
-      <h3 className="bg-gray-200 text-2xl text-black font-medium py-1 px-2">
-        COMPLETA TU LOOK
+    <div className={`w-full my-5 ${className}`}>
+      <h3
+        className={`bg-gray-200 text-2xl text-black font-medium py-1 px-2 ${classNameTitle}`}
+      >
+        {title}
       </h3>
+      {underline && <hr className="my-2" />}
       <div className="my-10">
         <SliderImg className="w-full">
           {cards.map((card, index) => (
@@ -21,6 +27,7 @@ const ListCard = ({ cards }: ListCardProps) => {
               precio={card.precio}
               foto={card.foto}
               albumFotos={card.albumFotos}
+              btn={btn}
             />
           ))}
         </SliderImg>

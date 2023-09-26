@@ -7,6 +7,7 @@ import ListCard from "./components/ListCard/ListCard";
 
 const {
   SECTION_TEXT: { TITLE, CONTENT },
+  TEXT: { COMPLETA_TU_LOOK, PRODUCTOS_RECOMENDADOS },
 } = Constans;
 
 const obj = {
@@ -40,6 +41,7 @@ function App() {
         <Section title={TITLE} content={CONTENT} />
         <Section title={TITLE} content={CONTENT} />
         <ListCard
+          title={COMPLETA_TU_LOOK}
           cards={[
             obj,
             obj,
@@ -55,6 +57,27 @@ function App() {
             obj,
             obj,
           ]}
+          btn={true}
+        />
+        <ListCard
+          title={PRODUCTOS_RECOMENDADOS}
+          cards={[
+            obj,
+            obj,
+            obj,
+            obj,
+            obj,
+            obj,
+            obj,
+            obj,
+            obj,
+            obj,
+            obj,
+            obj,
+            obj,
+          ]}
+          classNameTitle="bg-white text-gray-500"
+          underline
         />
       </Home>
     </>

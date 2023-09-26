@@ -24,6 +24,8 @@ export const Constans = {
     COD_DE_PRODUCTO: "Cod. de prod",
     TALLA: "TALLA",
     GUIA_DE_TALLAS: "GUÍA DE TALLAS",
+    COMPLETA_TU_LOOK: "COMPLETA TU LOOK",
+    PRODUCTOS_RECOMENDADOS: "PRODUCTOS RECOMENDADOS",
   },
   SECTION_TEXT: {
     TITLE: "Section 1",
