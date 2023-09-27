@@ -107,6 +107,8 @@ En la construcción de IKTECH TECNICA se utilizaron las siguientes tecnologías:
 
 - **TypeScript**: TypeScript se incorporó para agregar tipos estáticos a JavaScript y mejorar la robustez y legibilidad del código.
 
+- **Zustand**: Se utilizó zustand para el manejo de los estados internos de la app.
+
 - **React con Vite**: React se utilizó como la biblioteca principal para crear la interfaz de usuario de la aplicación.
 
 - **ESLint**: Se utilizó ESLint para garantizar la consistencia y calidad del código JavaScript en el proyecto.
@@ -126,6 +128,8 @@ Desarrollé este proyecto tratando de simular, lo mas similar posible, un proyec
 - **Archivo .env:** Para simplificar el proceso de revisión de la prueba técnica, no he incluido un archivo .env para la gestión de variables de entorno. En un entorno de producción real, esto sería esencial para la seguridad y configuración.
 
 - **Responsive:** La adaptación del proyecto a diferentes dispositivos y tamaños de pantalla (responsive design) no ha sido una prioridad en esta etapa de la prueba. En un proyecto real, se dedicaría tiempo y esfuerzo significativos para garantizar una experiencia óptima en diferentes dispositivos.
+
+- **Pruebas y Testeo:** También es importante mencionar que en este proyecto no se implementó un sistema de testeo completo, se priorizó la implementación funcional sobre la implementación de pruebas detalladas. En un entorno de producción real, se seguirían las mejores prácticas de desarrollo de software y se llevarían a cabo pruebas exhaustivas para garantizar la robustez y confiabilidad del proyecto.
 
 Este enfoque pragmático me permite destacar mis habilidades y conocimientos en las tecnologías específicas que se requieren para esta prueba técnica. Si fuera necesario, estaría encantado de expandir y mejorar estos aspectos en un entorno de desarrollo real.
 

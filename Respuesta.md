@@ -18,6 +18,6 @@ Para evitar la doble asignación de un servicio a múltiples conductores, se imp
 
 ### Mostrar Estado de conductores 
 
-El tercer módulo web consultará el microservicio de conductores a través de GraphQL para obtener información sobre la ubicación en tiempo real y el estado de los conductores. Para mostrar el estado inactivo, se utilizará el mecanismo de temporización en Redis. Si un conductor deja de emitir coordenadas después de 1 minuto, se considerará inactivo y se mostrará el estado correspondiente en el mapa.
+Se consultará el microservicio de conductores a través de GraphQL para obtener información sobre la ubicación en tiempo real y el estado de los conductores. Para mostrar el estado inactivo, se utilizará el mecanismo de temporización en Redis. Si un conductor deja de emitir coordenadas después de 1 minuto, se considerará inactivo y se mostrará el estado correspondiente en el mapa.
 
 Esta arquitectura proporciona modularidad, escalabilidad y flexibilidad para manejar la alta concurrencia y mostrar el estado inactivo de los conductores en el tercer módulo web.

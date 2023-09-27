@@ -8,7 +8,8 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "prepare": "if [[ -x \"$(command -v husky)\" ]]; then  husky install; fi"
+    "prepare": "if [[ -x \"$(command -v husky)\" ]]; then  husky install; fi",
+    "test": "jest --watchAll --verbose"
   },
   "dependencies": {
     "@apollo/client": "^3.8.4",
