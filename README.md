@@ -105,6 +105,8 @@ En la construcción de IKTECH TECNICA se utilizaron las siguientes tecnologías:
 
 - **GraphQL**: La tecnología GraphQL se empleó para gestionar las consultas y manipulación de datos de manera eficiente.
 
+- **Apollo server and client**: La tecnología Apollo server and client se empleó para la creación y consumo de los servicios.
+
 - **TypeScript**: TypeScript se incorporó para agregar tipos estáticos a JavaScript y mejorar la robustez y legibilidad del código.
 
 - **Zustand**: Se utilizó zustand para el manejo de los estados internos de la app.
@@ -118,6 +120,16 @@ En la construcción de IKTECH TECNICA se utilizaron las siguientes tecnologías:
 - **Husky**: Husky se configuró para ejecutar comprobaciones y acciones automatizadas en los commits de Git.
 
 - **Commitlint**: Se implementó Commitlint para asegurar que los mensajes de commit sigan un formato y convención específicos.
+
+- [Node.js](https://nodejs.org/)
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [Husky](https://typicode.github.io/husky/)
+- [GraphQL](https://graphql.org/)
+- [Apollo Server](https://www.apollographql.com/docs/apollo-server/)
+- [GraphQL Tools](https://www.graphql-tools.com/)
+- [Zustand](https://zustand-demo.pmnd.rs/)
+
 
 ## Metodología de Trabajo
 
