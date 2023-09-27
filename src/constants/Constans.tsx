@@ -3,21 +3,26 @@ export const Constans = {
     title: "DIRECTORIO DE TIENDAS",
     routes: [{ route: "/", name: "directorio de tiendas" }],
   },
-  SERVICIO_AL_CLIENTE: {
-    title: "SERVICIO AL CLIENTE",
-    routes: [{ route: "/", name: "servicio al cliente" }],
+  HOT_SALES: {
+    COMPRAS: {
+      ENVIOS: "ENVÍOS GRATIS PARA PEDIDOS SUPERIORES A $300.000",
+    },
+    SANDALIAS: {
+      PORCENT_30: "HOT SALE -30% EN SANDALIAS",
+    },
   },
   MI_CUENTA: {
     title: "MI CUENTA",
     routes: [{ route: "/", name: "directorio de tiendas" }],
   },
-  HOT_SALES: {
-    SANDALIAS: {
-      PORCENT_30: "HOT SALE -30% EN SANDALIAS",
-    },
-    COMPRAS: {
-      ENVIOS: "ENVÍOS GRATIS PARA PEDIDOS SUPERIORES A $300.000",
-    },
+  SECTION_TEXT: {
+    TITLE: "Section 1",
+    CONTENT:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+  },
+  SERVICIO_AL_CLIENTE: {
+    title: "SERVICIO AL CLIENTE",
+    routes: [{ route: "/", name: "servicio al cliente" }],
   },
   TEXT: {
     COLOR: "COLOR",
@@ -26,10 +31,5 @@ export const Constans = {
     GUIA_DE_TALLAS: "GUÍA DE TALLAS",
     COMPLETA_TU_LOOK: "COMPLETA TU LOOK",
     PRODUCTOS_RECOMENDADOS: "PRODUCTOS RECOMENDADOS",
-  },
-  SECTION_TEXT: {
-    TITLE: "Section 1",
-    CONTENT:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
   },
 };

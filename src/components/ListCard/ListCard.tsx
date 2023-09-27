@@ -1,14 +1,14 @@
-import { SliderImg } from "../SliderImg/SliderImg";
 import { Card } from "../Card/Card";
+import { SliderImg } from "../SliderImg/SliderImg";
 import ListCardInterface from "../../interfaces/ListCard/ListCardInterface";
 
 const ListCard = ({
+  btn,
   cards,
-  title,
   className,
   classNameTitle,
+  title,
   underline,
-  btn,
 }: ListCardInterface) => {
   return (
     <div className={`w-full my-5 ${className}`}>
@@ -22,12 +22,12 @@ const ListCard = ({
         <SliderImg className="w-full">
           {cards.map((card, index) => (
             <Card
+              albumFotos={card.albumFotos}
+              btn={btn}
+              foto={card.foto}
               key={index}
               nombre={card.nombre}
               precio={card.precio}
-              foto={card.foto}
-              albumFotos={card.albumFotos}
-              btn={btn}
             />
           ))}
         </SliderImg>

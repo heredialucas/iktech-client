@@ -1,14 +1,14 @@
-import { Constans } from "../../constants/Constans";
 import { Button } from "../../components/Button/Button";
 import { ButtonLink } from "../../styles/Button/Button";
+import { Constans } from "../../constants/Constans";
 
 const {
   DIRECTORIO_DE_TIENDAS,
-  SERVICIO_AL_CLIENTE,
-  MI_CUENTA,
   HOT_SALES: {
     SANDALIAS: { PORCENT_30 },
   },
+  MI_CUENTA,
+  SERVICIO_AL_CLIENTE,
 } = Constans;
 
 export const Header = () => {

@@ -1,19 +1,19 @@
+import { ButtonAdd } from "../../styles/Button/Button";
+import { SliderImg } from "../SliderImg/SliderImg";
+import { SliderStyle } from "../../styles/SliderCard/SliderCard";
 import { useProduct } from "../../context/store/store";
 import CardInterface from "../../interfaces/Card/CardInterface";
-import { ButtonAdd } from "../../styles/Button/Button";
-import { SliderStyle } from "../../styles/SliderCard/SliderCard";
-import { SliderImg } from "../SliderImg/SliderImg";
 
 export const Card = ({
-  nombre,
-  precio,
-  foto,
   albumFotos,
   btn,
+  foto,
+  nombre,
+  precio,
 }: CardInterface) => {
   const allProducts = useProduct((state) => state.allProducts);
-  const setProduct = useProduct((state) => state.setProduct);
   const setCartProducts = useProduct((state) => state.setCartProducts);
+  const setProduct = useProduct((state) => state.setProduct);
 
   return (
     <div className="flex flex-col justify-center items-center w-100 h-100 bg-white shadow-lg rounded overflow-hidden">
@@ -31,6 +31,7 @@ export const Card = ({
       </div>
       {btn && (
         <button
+          className={`btn rounded ${ButtonAdd}`}
           onClick={() => {
             allProducts &&
               setProduct(
@@ -44,7 +45,6 @@ export const Card = ({
               behavior: "smooth",
             });
           }}
-          className={`btn rounded ${ButtonAdd}`}
         >
           Agregar al carrito
         </button>

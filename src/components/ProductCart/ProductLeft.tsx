@@ -1,6 +1,6 @@
-import { useProduct } from "../../context/store/store";
-import { SliderStyle } from "../../styles/SliderCard/SliderCard";
 import { SliderImg } from "../SliderImg/SliderImg";
+import { SliderStyle } from "../../styles/SliderCard/SliderCard";
+import { useProduct } from "../../context/store/store";
 
 export const ProductLeft = () => {
   const productSelected = useProduct((state) => state.productSelected);

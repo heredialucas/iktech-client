@@ -8,7 +8,7 @@ export const ListProducts = ({ products }: Props) => {
   return (
     <>
       {products?.map((product) => (
-        <img src={product.foto} alt={product.nombre} key={product.nombre} />
+        <img src={product.foto} alt={product.nombre} key={product.nombre}/>
       ))}
     </>
   );

@@ -1,11 +1,11 @@
-import { ButtonAdd } from "../../styles/Button/Button";
-import { Button } from "../Button/Button";
 import { AiFillHeart } from "react-icons/ai";
+import { Button } from "../Button/Button";
+import { ButtonAdd } from "../../styles/Button/Button";
 import { Constans } from "../../constants/Constans";
 import { useProduct } from "../../context/store/store";
 
 const {
-  TEXT: { COD_DE_PRODUCTO, COLOR, TALLA, GUIA_DE_TALLAS },
+  TEXT: { COD_DE_PRODUCTO, COLOR, GUIA_DE_TALLAS, TALLA },
 } = Constans;
 
 export const ProductRight = () => {
@@ -24,7 +24,7 @@ export const ProductRight = () => {
       <h3 className="text-1xl text-gray-500 pt-10">{COLOR}</h3>
       <img
         className="h-24 object-contain self-start hover:border-2 hover:border-red-400 hover:shadow-lg"
-        src="https://i.ibb.co/4SnyQps/1.jpg"
+        src={productSelected?.foto}
         alt="ZAPAS"
       />
       <h3 className="text-1xl text-gray-500 pt-10">{TALLA}</h3>
@@ -52,8 +52,8 @@ export const ProductRight = () => {
       </a>
       <div className="flex items-center justify-between">
         <Button
-          onClick={() => productSelected && setCartProduct(productSelected)}
           className={ButtonAdd}
+          onClick={() => productSelected && setCartProduct(productSelected)}
           textContent="AÑADIR AL CARRITO"
         />
         <AiFillHeart className="text-gray-300 h-12 w-12 mt-5" />

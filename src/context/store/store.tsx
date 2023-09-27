@@ -3,15 +3,16 @@ import ProductCartInterface from "../../interfaces/ProductCart/ProductCartInterf
 
 interface useProductInterface {
   allProducts: ProductCartInterface[];
-  productSelected?: ProductCartInterface;
   cart: ProductCartInterface[];
+  productSelected?: ProductCartInterface;
   setAllProducts?: (products: ProductCartInterface[]) => void;
-  setProduct: (product: ProductCartInterface) => void;
   setCartProducts: (product: ProductCartInterface) => void;
+  setProduct: (product: ProductCartInterface) => void;
 }
 
 export const useProduct = create<useProductInterface>((set) => ({
   allProducts: [],
+  cart: [],
   productSelected: {
     nombre: "",
     precio: 0,
@@ -19,7 +20,6 @@ export const useProduct = create<useProductInterface>((set) => ({
     referencia: "",
     albumFotos: [],
   },
-  cart: [],
   setProduct: ({
     nombre,
     foto,

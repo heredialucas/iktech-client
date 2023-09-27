@@ -1,9 +1,9 @@
 import LinkInterface from "../../interfaces/Link/LinkInterface";
 
 export const Link = ({
-  className,
   children,
   childrenClassName,
+  className,
   href,
   textContent,
 }: LinkInterface) => {

@@ -1,6 +1,6 @@
-import img from "../../assets/hushpupies.png";
 import { Constans } from "../../constants/Constans";
 import { Input } from "../Input/Input";
+import img from "../../assets/hushpupies.png";
 
 const {
   HOT_SALES: {

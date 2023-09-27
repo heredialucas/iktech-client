@@ -1,14 +1,14 @@
-import { ProductCart } from "./components/ProductCart/ProductCart";
-import { Navbar } from "./components/Navbar/Navbar";
-import { Home } from "./pages/Home/Home";
-import { Section } from "./components/Section/Section";
 import { Constans } from "./constants/Constans";
-import ListCard from "./components/ListCard/ListCard";
 import { Footer } from "./components/Footer/Footer";
-import { useQuery } from "@apollo/client";
 import { GET_PRODUCTS } from "./queries/queries";
+import { Home } from "./pages/Home/Home";
 import { Loading } from "./components/Loading/Loading";
+import { Navbar } from "./components/Navbar/Navbar";
+import { ProductCart } from "./components/ProductCart/ProductCart";
+import { Section } from "./components/Section/Section";
 import { useProduct } from "./context/store/store";
+import { useQuery } from "@apollo/client";
+import ListCard from "./components/ListCard/ListCard";
 
 const {
   SECTION_TEXT: { TITLE, CONTENT },
@@ -17,8 +17,8 @@ const {
 
 function App() {
   const { data, loading } = useQuery(GET_PRODUCTS);
-  const setProduct = useProduct((state) => state.setProduct);
   const setAllProducts = useProduct((state) => state.setAllProducts);
+  const setProduct = useProduct((state) => state.setProduct);
 
   if (data?.products && setAllProducts) {
     setProduct(data.products[0]);
@@ -36,14 +36,14 @@ function App() {
         {data?.products && (
           <>
             <ListCard
-              title={COMPLETA_TU_LOOK}
-              cards={data.products}
               btn={true}
+              cards={data.products}
+              title={COMPLETA_TU_LOOK}
             />
             <ListCard
-              title={PRODUCTOS_RECOMENDADOS}
               cards={data?.products}
               classNameTitle="bg-white text-gray-500"
+              title={PRODUCTOS_RECOMENDADOS}
               underline
             />
           </>

@@ -1,9 +1,9 @@
 export default interface CardInterface {
-  nombre: string;
-  precio: number;
-  foto: string;
-  referencia?: string;
   albumFotos: string[];
   btn?: boolean;
+  foto: string;
   handleClick?: (foto: string) => void;
+  nombre: string;
+  precio: number;
+  referencia?: string;
 }

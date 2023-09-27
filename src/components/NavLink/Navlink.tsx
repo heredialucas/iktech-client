@@ -1,10 +1,11 @@
-import NavlinkInterface from "../../interfaces/Navlink/NavlinkInterface";
 import { FaLock } from "react-icons/fa";
 import { Link } from "../Link/Link";
 import { useProduct } from "../../context/store/store";
+import NavlinkInterface from "../../interfaces/Navlink/NavlinkInterface";
 
 export const Navlink = ({ className }: NavlinkInterface) => {
   const cartProducts = useProduct((state) => state.cart?.length);
+
   return (
     <div className={`flex justify-between ${className}`}>
       <div className={`flex gap-7 ${className}`}>

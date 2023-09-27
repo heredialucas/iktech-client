@@ -1,11 +1,11 @@
 import CardInterface from "../Card/CardInterface";
 
 export default interface ListCardInterface {
-  title: string;
+  btn?: boolean;
   cards: CardInterface[];
   className?: string;
   classNameTitle?: string;
-  underline?: boolean;
-  btn?: boolean;
   onClick?: () => void;
+  title: string;
+  underline?: boolean;
 }

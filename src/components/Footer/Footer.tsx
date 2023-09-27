@@ -1,6 +1,6 @@
-import FotterImg from "../../assets/footer.png";
 import { FooterLinks } from "./FooterLinks";
 import { FooterSocialMedia } from "./FooterSocialMedia";
+import FotterImg from "../../assets/footer.png";
 
 export const Footer = () => {
   return (

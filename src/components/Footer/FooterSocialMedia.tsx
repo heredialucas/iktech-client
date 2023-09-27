@@ -1,4 +1,4 @@
-import { FaFacebookF, FaInstagramSquare } from "react-icons/fa";
+import { FaFacebookF, FaInstagramSquare} from "react-icons/fa";
 
 export const FooterSocialMedia = () => {
   return (
